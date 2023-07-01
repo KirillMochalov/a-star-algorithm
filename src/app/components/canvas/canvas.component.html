@@ -1,0 +1,15 @@
+<div class="wrapper">
+
+  <canvas #canvas height="420" width="420" (click)="onClick($event)"></canvas>
+
+  <div class="control-panel">
+    <button type="button" [disabled]="!startPoint || !endPoint" (click)="findPath()">Find path</button>
+    <button type="button" (click)="drawMode = 'wall'">Draw wall</button>
+    <button type="button" (click)="drawMode = 'start_point'">Start point</button>
+    <button type="button" (click)="drawMode = 'end_point'">End point</button>
+
+    <div *ngIf="drawMode">Now drawing: {{ drawMode }}</div>
+    <div>Time: {{ algorithmTime }} ms</div>
+  </div>
+
+</div>

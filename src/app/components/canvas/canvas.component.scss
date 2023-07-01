@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  button {
+    width: 100px;
+  }
+}
